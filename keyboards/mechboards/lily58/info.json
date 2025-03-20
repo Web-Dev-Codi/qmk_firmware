@@ -1,7 +1,7 @@
 {
     "manufacturer": "splitkb.com",
-    "url": "https://splitkb.com",
-    "maintainer": "splitkb",
+    "url": "https://github.com/Web-Dev-Codi/qmk_firmware",
+    "maintainer": "Web-Dev-Codi",
     "usb": {
         "vid": "0x8D1D",
         "device_version": "1.0.0"
