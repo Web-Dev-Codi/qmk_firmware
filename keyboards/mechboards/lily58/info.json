@@ -1,0 +1,18 @@
+{
+    "manufacturer": "splitkb.com",
+    "url": "https://splitkb.com",
+    "maintainer": "splitkb",
+    "usb": {
+        "vid": "0x8D1D",
+        "device_version": "1.0.0"
+    },
+    "development_board": "kb2040",
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "split": {
+        "enabled": true
+    },
+    "build": {
+        "lto": true
+    }
+}

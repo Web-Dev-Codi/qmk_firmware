@@ -1,9 +1,15 @@
-// Copyright 2025 Dasky (@daskygit)
-// SPDX-License-Identifier: GPL-2.0-or-later
+
 
 #include "quantum.h"
 
 static uint16_t current_keycode = 0xFF;
+
+enum layers {
+    _QWERTZ,
+    _LOWER,
+    _RAISE,
+    _ADJUST,
+};
 
 static const char *depad_str(const char *depad_str, char depad_char) {
     while (*depad_str == depad_char)
@@ -33,7 +39,7 @@ __attribute__((weak)) void render_logo(void) {
 
 void render_small_mb_logo(void) {
     static const char PROGMEM small_mb_logo[] = {
-        112, 112, 112, 0, 112, 112, 112, 0, 112, 112, 112, 0, 112, 112, 112, 0, 112, 112, 112, 0, 0, 119, 119, 119, 0, 112, 112, 112, 0, 112, 112, 112, 119, 119, 119, 0, 0, 0, 0, 0, 119, 119, 119, 0, 0, 0, 0, 0, 119, 119, 119, 0, 0, 119, 119, 119, 0, 112, 112, 112, 0, 119, 119, 119,
+          112, 112, 112, 0, 112, 112, 112, 0, 112, 112, 112, 0, 112, 112, 112, 0, 112, 112, 112, 0, 0, 119, 119, 119, 0, 112, 112, 112, 0, 112, 112, 112, 119, 119, 119, 0, 0, 0, 0, 0, 119, 119, 119, 0, 0, 0, 0, 0, 119, 119, 119, 0, 0, 119, 119, 119, 0, 112, 112, 112, 0, 119, 119, 119,
     };
     oled_write_raw_P(small_mb_logo, sizeof(small_mb_logo));
 }
@@ -207,16 +213,16 @@ const char *layer_string(uint32_t layer) {
     char *layer_str;
     switch (layer) {
         case 0:
-            layer_str = "Zero\0";
+            layer_str = "QWRTZ\0";
             break;
         case 1:
-            layer_str = "One\0";
+            layer_str = "LOWER\0";
             break;
         case 2:
-            layer_str = "Two\0";
+            layer_str = "RAISE\0";
             break;
         case 3:
-            layer_str = "Three\0";
+            layer_str = "ADJST\0";
             break;
         case 4:
             layer_str = "Four\0";
@@ -293,7 +299,7 @@ void keyboard_post_init_kb(void) {
 }
 
 layer_state_t layer_state_set_kb(layer_state_t state) {
-    state = layer_state_set_user(state);
+    state = update_tri_layer_state(state, _RAISE, _LOWER, _ADJUST);
     oled_set_cursor(0, 2);
     oled_write_ln(layer_string(get_highest_layer(state)), false);
     return state;
