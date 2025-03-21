@@ -1,9 +1,11 @@
+# Configuration settings for Lily58KB with KB2040 MCU
 WS2812_DRIVER = vendor
+SERIAL_DRIVER = vendor
+
 # Split keyboard settings
 SPLIT_KEYBOARD = yes
-SERIAL_DRIVER = vendor
 CONSOLE_ENABLE = yes        # Console for debug
-COMMAND_ENABLE = no         # Commands for debug and configuration
+COMMAND_ENABLE = yes        # Commands for debug and configuration
 NKRO_ENABLE = no            # Enable NKRO
 
 # Define correct I2C pins for RP2040
