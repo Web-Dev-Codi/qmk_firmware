@@ -66,7 +66,7 @@ static void render_lily58_logo(void) {
     0
     };
      oled_write_P(lily58_logo, false);
-  oled_write_P(PSTR("    Lily58 KB2040    "), false);
+  oled_write_P(PSTR("---------------KB2040"), false);
 }
 
 
@@ -251,7 +251,7 @@ void keyboard_post_init_kb(void) {
         oled_advance_page(false);
         oled_write_ln("Wait", false);
 
-        oled_set_cursor(0, 13);
+        oled_set_cursor(0, 12);
         oled_write_ln("WPM", false);
         render_spacer(3);
         oled_advance_page(false);
