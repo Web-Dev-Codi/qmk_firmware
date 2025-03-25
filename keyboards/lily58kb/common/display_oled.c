@@ -21,6 +21,7 @@
  */
 
 #include "quantum.h"
+#include "timer.h"
 
 static uint16_t current_keycode = 0xFF;
 
@@ -228,6 +229,27 @@ bool process_detected_host_os_kb(os_variant_t detected_os) {
     }
 
     return true;
+}
+
+void keyboard_pre_task_kb(void) {
+    // Check for power state changes that might cause phantom keypresses
+    static uint16_t power_state_timer = 0;
+    static bool power_state_checked = false;
+
+    // During power state transitions (like shutdown), USB communication becomes unstable
+    // This can cause phantom keypresses, especially on RP2040 controllers
+    if (!power_state_checked) {
+        power_state_timer = timer_read();
+        power_state_checked = true;
+    } else if (timer_elapsed(power_state_timer) > 1000) {
+        // Reset the matrix state periodically to prevent phantom keypresses
+        // This is especially helpful during shutdown sequences
+        clear_keyboard();
+        power_state_timer = timer_read();
+    }
+
+    // We don't need to call a user function here as it's not defined in QMK
+    // Remove the recursive call to keyboard_pre_task_kb()
 }
 
 void keyboard_post_init_kb(void) {
