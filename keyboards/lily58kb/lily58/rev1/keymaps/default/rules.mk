@@ -5,7 +5,8 @@ SERIAL_DRIVER = vendor
 # Split keyboard settings
 CONSOLE_ENABLE = yes        # Console for debug
 COMMAND_ENABLE = yes        # Commands for debug and configuration
-NKRO_ENABLE = no            # Enable NKRO
+NKRO_ENABLE = yes            # Enable NKRO
+SPLIT_KEYBOARD = yes        # Split keyboard support
 
 
 # Define correct I2C pins for RP2040
