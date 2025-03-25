@@ -14,3 +14,12 @@
 
 #define FORCE_BOOT_PROTOCOL    // Forces boot protocol instead of NKRO
 #define NO_USB_STARTUP_CHECK   // Disables USB suspend check after keyboard startup
+
+// Split keyboard settings
+// Use USB detection instead of pin detection for RP2040
+#define SPLIT_HAND_PIN_LOW
+#define MASTER_LEFT
+#define SPLIT_USB_DETECT
+#define SPLIT_USB_TIMEOUT 2000
+#define SPLIT_USB_TIMEOUT_POLL 10
+#define SPLIT_TRANSACTION_IDS_KB SYNC_WPM
