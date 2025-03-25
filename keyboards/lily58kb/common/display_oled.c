@@ -247,9 +247,6 @@ void keyboard_pre_task_kb(void) {
         clear_keyboard();
         power_state_timer = timer_read();
     }
-
-    // We don't need to call a user function here as it's not defined in QMK
-    // Remove the recursive call to keyboard_pre_task_kb()
 }
 
 void keyboard_post_init_kb(void) {
