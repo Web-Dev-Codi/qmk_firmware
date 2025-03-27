@@ -98,11 +98,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // LGUI(KC_LSFT(KC_1)) to LGUI(KC_LSFT(KC_8)) are used for moving focused window to KC number that is specified.
 
 [_RAISE] = LAYOUT(
-  LGUI(KC_1)         ,LGUI(KC_2)         ,LGUI(KC_3)         ,LGUI(KC_4)         ,LGUI(KC_5)         ,LGUI(KC_6),                                   KC_1   ,KC_2   ,KC_3   ,KC_PSCR,KC_UP  ,KC_DEL  ,
-  LGUI(KC_7)         ,LGUI(KC_8)         ,_______            ,_______            ,LSFT(KC_LALT)      ,LCTL(KC_D),                                   KC_4   ,KC_5   ,KC_6   ,KC_LEFT,_______,KC_RIGHT,
-  LGUI(KC_LSFT(KC_1)),LGUI(KC_LSFT(KC_2)),LGUI(KC_LSFT(KC_3)),LGUI(KC_LSFT(KC_4)),LGUI(KC_LSFT(KC_5)),LGUI(KC_LSFT(KC_6)),                          KC_7   ,KC_8   ,KC_9   ,_______,KC_DOWN,XXXXXXX ,
-  LGUI(KC_LSFT(KC_7)),LGUI(KC_LSFT(KC_8)),_______            ,_______            ,_______            ,_______            ,KC_DOWN,           KC_UP ,KC_PLUS,KC_P0  ,KC_PEQL,KC_LBRC,KC_RBRC,KC_BSLS ,
-                                                                                  _______            ,_______            ,_______,KC_SPC,    KC_ENT,_______,_______,_______
+  LGUI(KC_1)      ,LGUI(KC_2)      ,LGUI(KC_3)      ,LGUI(KC_4)      ,LGUI(KC_5)      ,LGUI(KC_6),                                KC_1   ,KC_2   ,KC_3   ,KC_PSCR,KC_UP  ,KC_DEL  ,
+  LGUI(KC_7)      ,LGUI(KC_8)      ,_______         ,_______         ,LSFT(KC_LALT)   ,LCTL(KC_D),                                KC_4   ,KC_5   ,KC_6   ,KC_LEFT,_______,KC_RIGHT,
+  LGUI(LSFT(KC_1)),LGUI(LSFT(KC_2)),LGUI(LSFT(KC_3)),LGUI(LSFT(KC_4)),LGUI(LSFT(KC_5)),LGUI(LSFT(KC_6)),                          KC_7   ,KC_8   ,KC_9   ,_______,KC_DOWN,XXXXXXX ,
+  LGUI(LSFT(KC_7)),LGUI(LSFT(KC_8)),_______         ,_______         ,_______         ,_______         ,KC_DOWN,           KC_UP ,KC_PLUS,KC_P0  ,KC_PEQL,KC_LBRC,KC_RBRC,KC_BSLS ,
+                                                                      _______         ,_______         ,_______,KC_SPC,    KC_ENT,_______,_______,_______
 ),
 
 /* ADJUST
