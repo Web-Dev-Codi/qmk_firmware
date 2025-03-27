@@ -8,6 +8,10 @@ COMMAND_ENABLE = yes        # Commands for debug and configuration
 NKRO_ENABLE = no            # Enable NKRO
 SPLIT_KEYBOARD = yes        # Split keyboard support
 
+SPLIT_WATCHDOG_ENABLE=yes
+SPLIT_WATCHDOG_TIMEOUT=2000
+
+
 
 # Define correct I2C pins for RP2040
 I2C1_SDA_PIN = GP2

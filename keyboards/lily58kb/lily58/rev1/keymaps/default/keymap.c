@@ -1,7 +1,6 @@
 /* Copyright 2017 F_YUUCHI
   * Copyright 2020 Drashna Jaelre <@drashna>
   * Copyright 2020 Ben Roesner (keycapsss.com)
-  * Copyright 2025 Dasky (@daskygit)
   * Copyright 2025 Web-Dev-Codi (https://github.com/web-dev-codi)
   *
   * This program is free software: you can redistribute it and/or modify
@@ -94,13 +93,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   |      |      |      |/       /         \      \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
-/
+
 [_RAISE] = LAYOUT(
-  KC_AGIN, KC_UNDO, KC_CUT, KC_COPY, KC_PSTE, KC_FIND,                       KC_1   , KC_2   , KC_3    ,KC_PSLS, KC_UP   , KC_ASTR,
-  KC_GRV , _______, _______, _______, _______, _______,                      KC_4   , KC_5   , KC_6    ,KC_LEFT, _______ ,KC_RIGHT,
-  LSFT(KC_LALT),KC_F2   , KC_F3,   KC_F4,   KC_F5, KC_F6  ,                  KC_7   , KC_8   , KC_9    , _______, KC_DOWN, XXXXXXX,
-  LCTL(KC_D)  ,KC_F8    , KC_F9,  KC_F10,  KC_F11, KC_F12 , KC_DOWN, KC_UP,  KC_PLUS , KC_P0   , KC_PEQL , KC_LBRC, KC_RBRC, KC_BSLS,
-                                   _______, _______, _______, KC_SPC,  KC_ENT,  _______, _______, _______
+  LGUI(KC_1)   ,LGUI(KC_2),LGUI(KC_3) ,LGUI(KC_4),LGUI(KC_5),LGUI(KC_6),                    KC_1    ,KC_2   ,KC_3    ,KC_PSLS,KC_UP   ,KC_ASTR ,
+  LGUI(KC_7)   ,LGUI(KC_8),_______    ,_______   ,_______   ,_______   ,                    KC_4    ,KC_5   ,KC_6    ,KC_LEFT,_______ ,KC_RIGHT,
+  LSFT(KC_LALT),KC_F2     ,KC_F3      ,KC_F4     ,KC_F5     ,KC_F6     ,                    KC_7    ,KC_8   ,KC_9    ,_______,KC_DOWN ,XXXXXXX ,
+  LCTL(KC_D)   ,KC_F8     ,KC_F9      ,KC_F10    ,KC_F11    ,KC_F12    ,KC_DOWN,      KC_UP,KC_PLUS ,KC_P0  ,KC_PEQL ,KC_LBRC,KC_RBRC ,KC_BSLS ,
+                                          _______,_______   ,_______   ,KC_SPC ,     KC_ENT,_______ ,_______, _______
 ),
 
 /* ADJUST
