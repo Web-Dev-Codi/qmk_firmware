@@ -1,8 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
+// Modified by: Web-Dev-Codi (https://www.github.com/Web-Dev-Codi) 2025
 
 #pragma once
-
-
 
 
 // USB and Power Management Configuration
@@ -20,7 +19,6 @@
 #define NO_USB_STARTUP_CHECK   // Disables USB suspend check after keyboard startup
 
 // Split keyboard settings
-// Use USB detection instead of pin detection for RP2040
 #define SPLIT_HAND_PIN_LOW
 #define MASTER_LEFT
 #define SPLIT_USB_DETECT
